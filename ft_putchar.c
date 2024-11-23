@@ -1,23 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*    ft_putstr.c                                       :+:      :+:    :+:   */
+/*   ft_putchar.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:51:53 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/18 13:53:54 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/20 19:42:16 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/23 13:04:18 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-char ft_putstr(char str)
+int	ft_putchar(char c)
 {
-	int i = 0;
-	while(str[i])
-	{
-		weite(1,&str[i],1);
-		i++;
-	}
+	write(1, &c, 1);
+	return (1);
 }

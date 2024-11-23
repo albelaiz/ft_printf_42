@@ -1,37 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*    ft_putstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/11/18 13:43:21 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/22 20:31:57 by albelaiz         ###   ########.fr       */
+/*   Created: 2024/11/18 13:51:53 by albelaiz          #+#    #+#             */
+/*   Updated: 2024/11/22 16:57:39 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putnbr(int nb)
+int	ft_putstr(char *str)
 {
-	char	c;
-	int		count;
+	int	len;
 
-	count = 0;
-	if (nb == -2147483648)
+	if (!str)
 	{
-		return (ft_putstr("-2147483648"));
+		write(1, "(null)", 6);
+		return (6);
 	}
-	if (nb < 0)
-	{
-		count += write(1, "-", 1);
-		nb = nb * -1;
-	}
-	if (nb >= 10)
-	{
-		count += ft_putnbr(nb / 10);
-	}
-	c = nb % 10 + 48;
-	count += ft_putchar(c);
-	return (count);
+	len = ft_strlen(str);
+	write(1, str, len);
+	return (len);
 }
