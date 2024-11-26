@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:30:52 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/23 12:25:22 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:44:46 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,10 @@
 int	ft_putnbr(int nb);
 int	ft_putchar(char c);
 int	ft_putstr(char *str);
+int	ft_strlen(char *str);
 int	ft_unbr(unsigned int nb);
 int	ft_printf(const char *forma, ...);
 int	ft_puthex(unsigned int n, int uppr);
 int	ft_putaddres(unsigned long n, int uppr);
-int	ft_strlen(char *str);
 
 #endif

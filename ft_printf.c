@@ -6,7 +6,7 @@
 /*   By: albelaiz <albelaiz@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/11/18 12:28:33 by albelaiz          #+#    #+#             */
-/*   Updated: 2024/11/23 12:55:49 by albelaiz         ###   ########.fr       */
+/*   Updated: 2024/11/25 20:34:38 by albelaiz         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,10 @@ static int	helper(char c, va_list ptr)
 		cont += ft_puthex(va_arg(ptr, unsigned int), 0);
 	else if (c == 'p')
 		cont += ft_putstr("0x") + ft_putaddres(va_arg(ptr, unsigned long), 0);
-	else
+	else if (c == '%')
 		cont += ft_putchar('%') + ft_putchar(c);
+	else
+		cont += ft_putchar(c);
 	return (cont);
 }
 
